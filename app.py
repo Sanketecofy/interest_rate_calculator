@@ -56,7 +56,7 @@ if st.button("Calculate Interest Rate"):
     reducing_rate, flat_rate, details = cal_interest_rate(constants['final_rate'], input_vars)
 
     st.subheader("📈 Output")
-    st.write(f"Reducing Interest Rate: **{reducing_rate * 100:.2f}%**")
+    # st.write(f"Reducing Interest Rate: **{reducing_rate * 100:.2f}%**")
     st.write(f"Flat Interest Rate : **{flat_rate * 100:.2f}%**")
     st.write(f"EMI : **{details['emi']:.4f}**")
     # st.subheader("🧾 Calculation Details")
