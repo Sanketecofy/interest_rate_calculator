@@ -35,19 +35,16 @@ def cal_interest_rate(rate, input_vars):
     flat_rate = amort['flat_rate']
     return rate, flat_rate, amort
 
-def get_final_rate(lan):
-    return 0.16
-
 st.title("💰 Interest Rate Calculator")
 
 # User inputs
+interest_rate = st.number_input("Reducing rate (%)", value=16)
 principal = st.number_input("Loan Amount (Principal)", value=125000)
 tenure = st.number_input("Loan Tenure (Months)", value=24)
 # Example usage
 
-lan = 1
 constants = {
-    "final_rate": get_final_rate(lan)
+    "final_rate": interest_rate/100
     }
 
 if st.button("Calculate Interest Rate"):
