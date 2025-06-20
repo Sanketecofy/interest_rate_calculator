@@ -22,7 +22,7 @@ def generate_amortization(principal, annual_rate, tenure_months):
         interest = balance * monthly_rate
         principal_payment = emi - interest
         balance -= principal_payment
-        aum = balance + principal_payment / 2  # mid-month approximation
+        aum = balance + principal_payment  # mid-month approximation
         schedule.append({
             "Month": i,
             "EMI": emi,
