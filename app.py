@@ -71,8 +71,8 @@ if st.sidebar.button("Calculate"):
                 'EMI': '₹{:.2f}',
                 'Principal': '₹{:.2f}',
                 'Interest': '₹{:.2f}',
-                'Balance': '₹{:.2f}',
-                'AUM': '₹{:.2f}',
+                'Opening balance': '₹{:.2f}',
+                'Closing balance': '₹{:.2f}'
             }), use_container_width=True
         )
         csv = schedule_df.to_csv(index=False).encode('utf-8')
