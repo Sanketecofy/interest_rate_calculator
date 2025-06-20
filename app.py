@@ -38,12 +38,15 @@ def generate_amortization(principal, annual_rate, tenure_months):
 st.sidebar.header("🔧 Input Parameters")
 interest_rate = st.sidebar.number_input("Reducing Rate (%)", min_value=0.0, value=16.0, step=0.1)
 principal = st.sidebar.number_input("Loan Amount (Principal)", min_value=0.0, value=125000.0, step=1000.0, format="%.2f")
-tenure_years = st.sidebar.selectbox(
+tenure_years = st.sidebar.slider(
     "Loan Tenure (Years)",
-    options=[1, 2, 3, 4, 5],
-    format_func=lambda x: f"{x} year{'s' if x > 1 else ''}"
+    min_value=1,
+    max_value=5,
+    step=1,
+    value=2
 )
-tenure = tenure_years * 12
+tenure = tenure_years * 12  # Convert to months
+
  
 # Main title
 st.title("💰 Interest Rate Calculator")
